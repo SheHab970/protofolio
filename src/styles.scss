@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+    --MainColor: #4c7275;
+    --secondaryColor: #86b9b0;
+    --backgroundColor: #041421;
+    --secondarybackgroundColor: #052530;
+    --ParagraphColor: #d1d5d6;
+    --main-font: "Tajawal", serif;
+  }
+  
+*{
+    font-family: var(--main-font);
+}
+html{
+    scroll-behavior: smooth;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--secondaryColor);
+    margin: 0;
+}
+p{
+    color: var(--ParagraphColor);
+}
+
+//bg #041421
+// se bg #052530
+// color #4c7275
+// sec color #86b9b0
+// white #d1d5d6
+
+body{
+    height: 100vh;
+    background-color: var(--backgroundColor) !important;
+  }

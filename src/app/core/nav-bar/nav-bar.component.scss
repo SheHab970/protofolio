@@ -1,0 +1,87 @@
+.nav_bar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .nav-body{
+        background-color: var(--secondarybackgroundColor);
+        padding: 20px 10px;
+        margin: 30px;
+        border-radius: 10px;
+
+        .logo{
+            .image{
+                width: 8%;
+                // ::after{
+                //     content: "";
+                //     width: 5px;
+                //     height: 100%;
+                //     color: var(--MainColor);
+                // }
+            }
+            .image::after{
+                content: "";
+                position: absolute;
+                width: 5px;
+                border-radius: 35px;
+                margin-left: 8px;
+                height: 35%;
+                background-color: var(--MainColor);
+            }
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        .menue{
+            padding-right: 6%;
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 45px;
+                margin: 0;
+                li{
+                    list-style: none;
+                    padding: 0;
+                    a{
+                        text-decoration: none;
+                        color: var(--secondaryColor);
+                        font-size: 18px;
+                        position: relative;
+                    }::after{
+                        position: absolute;
+                        bottom: -2px;
+                        left: 1px;
+                        content: "";
+                        width: 0%;
+                        height: 2px;
+                        background-color: var(--MainColor);
+                        transition: 0.5s;
+
+                    }
+                    a:hover::after{
+                        // animation: animation 1s;
+                        width: 100%;
+                    }
+                        .link-active{
+                        border-bottom: solid 2px var(--MainColor);
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+@keyframes animation {
+    0%{
+        // opacity: 0.5;
+        // transform: translateY(-30%);
+        width: 0;
+    }
+    100%{
+        // opacity: 1;
+        // transform: translateY(0%);
+        width: 100%;
+    }
+}
