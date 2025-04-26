@@ -6,8 +6,11 @@
 
 :root {
     --MainColor: #4c7275;
+    --newcolor: 	#FF6978;
+    --secondNewColor:	#5E548E;
     --secondaryColor: #86b9b0;
     --backgroundColor: #041421;
+    --backgroundgradient: linear-gradient(165deg,rgba(4, 20, 33, 1) 0%, rgba(5, 37, 48, 1) 100%);
     --secondarybackgroundColor: #052530;
     --ParagraphColor: #d1d5d6;
     --main-font: "Tajawal", serif;
@@ -37,5 +40,5 @@ p{
 
 body{
     height: 100vh;
-    background-color: var(--backgroundColor) !important;
+    background: var(--backgroundgradient) !important;
   }
