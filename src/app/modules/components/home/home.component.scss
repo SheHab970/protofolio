@@ -6,6 +6,11 @@
             // overflow: hidden;
             .infor-section{
                 width: 50%;
+                .welcome{
+                    h2{
+                        color: var(--newcolor);
+                    }
+                }
                 .name{
                     position: relative;
                     margin-bottom: 10px;
@@ -16,7 +21,7 @@
                     }::after{
                         content: "";
                         position: absolute;
-                        bottom: -11px;
+                        bottom: -28%;
                         left: 1px;
                         width: 100px;
                         height: 7px;
@@ -31,6 +36,7 @@
                 }
                 .jop{
                     padding: 15px 11px;
+                    margin-top: 3.5rem;
                     h4{
                         display: inline-block;
                         white-space: nowrap;
@@ -176,7 +182,7 @@
                     width: 224px;
                     background-image: linear-gradient(180deg, var(--newcolor), var(--secondNewColor));
                     height: 142%;
-                    animation: _ngcontent-ng-c201423871_rotBGimg 3s linear infinite;
+                    animation: rotBGimg 3s linear infinite;
                     transition: all 0.2s linear;
                   }
             }
