@@ -1,0 +1,60 @@
+.about-section{
+    background-color: var(--backgroundColor);
+    margin-top: 10%;
+    .about-body{
+        position: relative;
+        padding: 80px 0px;
+        margin-top: 6.5rem;
+        .header{
+            width: 50%;
+            h1{
+                font-size: 5rem;
+            }
+        }
+        .after-effect::after{
+            position: absolute;
+            top: 18%;
+            right: 53%;
+            content: "";
+            border-radius: 15px;
+            background: var(--WarmYellow);
+            height: 74%;
+            width: 5px;
+        }
+        .contenr{
+            width: 50%;
+            h4{
+                font-size: 30px;
+                padding: 15px 0px;
+            }
+            span{
+                color: var(--secondNewColor);
+                font-size: 45px;
+            }
+            p{
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+.animated-object-X {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1.3s ease-out;
+  }
+  
+  .animated-object-X.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .parent-container .child {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .parent-container.show .child {
+    opacity: 1;
+    transform: translateX(0);
+  }

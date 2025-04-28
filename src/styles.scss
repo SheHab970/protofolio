@@ -7,9 +7,11 @@
 :root {
     --MainColor: #4c7275;
     --newcolor: 	#FF6978;
-    --secondNewColor:	#5E548E;
+    --secondNewColor:	#7F5AF0;
     --secondaryColor: #86b9b0;
     --backgroundColor: #041421;
+    --WarmYellow: 	#FFD166;
+    --LightText: 	#B4C5D3;
     --backgroundgradient: linear-gradient(165deg,rgba(4, 20, 33, 1) 0%, rgba(5, 37, 48, 1) 100%);
     --secondarybackgroundColor: #052530;
     --ParagraphColor: #d1d5d6;
@@ -39,6 +41,6 @@ p{
 // white #d1d5d6
 
 body{
-    height: 100vh;
+    // height: 100vh;
     background: var(--backgroundgradient) !important;
   }
