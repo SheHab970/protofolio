@@ -1,0 +1,79 @@
+section{
+    .skills-body{
+        overflow: hidden;
+        padding: 6% 6%;
+        // background-color: var(--backgroundColor);
+        .main-body{
+            .header{
+                padding-bottom: 15px;
+                width: 100%;
+                h1{
+                    font-size: 4.5rem;
+                }
+                span{
+                    font-size: 5.5rem;
+                    color: var(--secondNewColor);
+                }
+            }
+            .slider{
+                width: 85%;
+                .slider-wrapper {
+                    overflow: hidden;
+                    width: 100%;
+                    white-space: nowrap;
+                  }
+                  
+                  .slider-track {
+                    display: inline-block;
+                    white-space: nowrap;
+                    animation: scroll-left 15s linear infinite;
+
+                    .element{
+                        .item{
+                            margin: 0px 60px;
+                            .image{
+                                width: 50px;
+                                height: auto;
+                                padding: 15px 0px;
+                                border-radius: 50%;
+
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                    height: auto;
+                                    display: inline-block;
+                                    margin-right: 10px;
+                                }
+                            }
+                            h4{
+                                font-size: 18px;
+                                color: var(--LightText);
+                            }
+
+                        }
+                    }
+                    .element:nth-child(even){
+                        h4{
+                            color: var(--secondNewColor) !important;
+                        }
+                    }
+                  }
+                &:hover{
+                    cursor: pointer;
+                    .slider-track{
+                        animation-play-state: paused;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
