@@ -1,1 +1,25 @@
-
+<section>
+    <div class="container">
+        <div class="projects-sec d-flex flex-column justify-content-center align-items-center">
+            <div class="header">
+                <h2>Latest <span>Projects</span></h2>
+            </div>
+            <div class="body">
+                <div class="projects d-flex gap-1 flex-wrap justify-content-between">
+                    <div *ngFor="let item of projects" class="project d-flex flex-column gap-2">
+                        <div class="image">
+                            <img [src]="item.img" alt="project-img">
+                        </div>
+                        <div class="description">
+                            <h5>{{item.name}}</h5>
+                            <p>{{item.description}}</p>
+                        </div>
+                        <div class="btns">
+                            <button><a [href]="item.url" target="_blank">viste</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
