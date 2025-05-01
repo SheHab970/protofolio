@@ -21,9 +21,12 @@
   
 *{
     font-family: var(--main-font);
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
+    scrollbar-color:var(--backgroundColor) var(--secondarybackgroundColor);
+    scrollbar-width: auto; 
 
 }
 
