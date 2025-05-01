@@ -1,13 +1,23 @@
 
 <main>
   <div class="nav-Bar">
-    <app-nav-bar/>
+    <app-nav-bar [activeSection]="activeSection"/>
   </div>
+
   <div class="page-section">
-    <router-outlet/>
-    <app-about />
-    <app-skills/>
-    <app-projects />
+
+    <section id="home">
+      <app-home (scrollToProjects)="scrollToProjects()" />
+    </section>
+
+    <section id="about">
+      <app-about />
+      <app-skills/>
+    </section>
+
+    <section id="projects" #projectsSection>
+      <app-projects />
+    </section>
     
     <div>
       <button id="UpBottum" class="up-button" [ngClass]="{'display' : down}" (click)="Upwindow()">

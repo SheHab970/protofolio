@@ -4,7 +4,12 @@ main{
 
     // }
     .page-section{
-        margin-top: 10%;
+        // margin-top: 10%;
+        section {
+            min-height: 100vh;
+            scroll-margin-top: 120px; /* match your navbar height */
+            align-content: center;
+          }
     }
     .up-button{
         position: fixed;

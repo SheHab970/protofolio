@@ -43,10 +43,10 @@
 
                 <div class="menue d-flex">
                     <ul>
-                        <li><a routerLinkActive="link-active" routerLink="home">Home</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="#home" [class.active]="activeSection === 'home'" >Home</a></li>
+                        <li><a href="#about" [class.active]="activeSection === 'about'" >About</a></li>
+                        <li><a href="#projects" [class.active]="activeSection === 'projects'" >Projects</a></li>
+                        <li><a href="#contact" [class.active]="activeSection === 'contact'" >contact</a></li>
                     </ul>
                 </div>
             </div>

@@ -63,15 +63,17 @@
                         width: 0%;
                         height: 2px;
                         background-color: var(--MainColor);
-                        transition: 0.5s;
+                        transition: 0.8s;
 
                     }
                     a:hover::after{
                         // animation: animation 1s;
                         width: 100%;
                     }
-                        .link-active{
+                    a.active{
                         border-bottom: solid 2px var(--MainColor);
+                        color: var(--secondaryColor);
+                        // font-weight: bold;
                     }
 
                 }
