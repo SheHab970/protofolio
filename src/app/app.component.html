@@ -8,5 +8,11 @@
     <app-about />
     <app-skills/>
     <app-projects />
+    
+    <div>
+      <button id="UpBottum" class="up-button" [ngClass]="{'display' : down}" (click)="Upwindow()">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
   </div>
 </main>
