@@ -1,5 +1,5 @@
+import { Component, QueryList, ViewChildren, ElementRef, HostListener, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -30,5 +30,34 @@ export class ProjectsComponent {
       url : 'https://shehab970.github.io/RentaLx_website/'
     },
   ];
+
+  //animation for cards
+  @ViewChildren('animatedElements') animatedElements!: QueryList<ElementRef>;
+
+  ngAfterViewInit() {
+    this.checkVisibility(); // check once on load
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkVisibility();
+  }
+
+  checkVisibility() {
+    const windowHeight = window.innerHeight;
+
+    this.animatedElements.forEach((el, index) => {
+      const rect = el.nativeElement.getBoundingClientRect();
+
+      if (rect.top < windowHeight - 100 && rect.bottom > 100) {
+        // Add a delay based on index
+        setTimeout(() => {
+          el.nativeElement.classList.add('show');
+        }, index * 300); // 200ms delay between each
+      } else {
+        el.nativeElement.classList.remove('show');
+      }
+    });
+  }
 
 }
