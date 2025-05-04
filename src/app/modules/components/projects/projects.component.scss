@@ -75,7 +75,7 @@ section{
                             transform: translateY(100%);
                             opacity: 0;
                             &:hover{
-                                background: #3f0f14;
+                                background: var(--buttonHover);
                                 transform: scale(1.1) !important;
                                 // transform: translateY(-4px);
                             }

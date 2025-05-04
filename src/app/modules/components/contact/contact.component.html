@@ -1,1 +1,77 @@
-<p>contact works!</p>
+<section>
+    <div class="container">
+        <div class="contact-body">
+            <div class="main-content d-flex justify-content-around gap-4">
+                <div class="head d-flex  flex-column">
+                    <div>
+                        <div class="header">
+                            <h2>Contact <span>Me</span></h2>
+                        </div>
+                        <div class="contact d-flex flex-column gap-2">
+                            <div class="contact-box d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>shehab202205097&#64;gmail.com</p>
+                            </div>
+                            <div class="contact-box d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>[+20] 1020446938</p>
+                            </div>
+                            <div class="social">
+                                <div class="social-header">
+                                    <h4>Social</h4>
+                                </div>
+                                <div class="icons d-flex gap-2">
+                                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="form-part">
+                    <div class="form-body">
+                        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                            <div class="input-feild">
+                                <input type="text" placeholder="Your Name" formControlName="name">
+                                <small 
+                                *ngIf="contactForm.hasError('required','name')
+                                &&
+                                contactForm.controls.name.dirty" 
+                                class="text-danger m-0 p-0">
+                                Name is required
+                                </small>
+                            </div>
+                            <div class="input-feild">
+                                <input type="email" placeholder="Your Email" formControlName="email">
+                                <small 
+                                *ngIf="contactForm.hasError('required','email')
+                                &&
+                                contactForm.controls.email.dirty" 
+                                class="text-danger m-0 p-0">
+                                Email is required
+                                </small>
+                            </div>
+                            <div class="input-feild">
+                                <textarea name="" id="" placeholder="Your Massage" formControlName="massage"></textarea>
+                                <small 
+                                *ngIf="contactForm.hasError('required','massage')
+                                &&
+                                contactForm.controls.massage.dirty" 
+                                class="text-danger m-0 p-0">
+                                Massage is required
+                                </small>
+                            </div>
+                            <div class="input-feild">
+                                <button>Submit</button>
+                            </div>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
