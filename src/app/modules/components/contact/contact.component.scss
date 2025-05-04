@@ -1,5 +1,22 @@
 section{
     .contact-body{
+        .sectiom-head{
+            .section_header{
+                padding: 3rem 0px;
+                h1{
+                    font-size: 5rem;
+                    color: var(--yallow);
+                    padding-bottom: 10px;
+                }
+            }
+            .heser_animation{
+                // width: 80%;
+                height: 6px;
+                background-color: var(--buttonColor);
+                border-radius: 15pc;
+                
+            }
+        }
         .main-content{
             padding: 0px 50px;
             .head{
@@ -7,7 +24,7 @@ section{
                 .header{
                     margin-bottom: 25px;
                     h2{
-                        font-size: 5rem;
+                        font-size: 4rem;
 
                     }
                     span{
@@ -118,3 +135,34 @@ section{
         }
     }
 }
+
+// for Animation 
+.animated-heder{
+    width: 0%;
+    transition: all 1.5s ease-out;
+}
+.animated-heder.show{
+    width: 80%;
+}
+
+.animated-object-X {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1.3s ease-out;
+  }
+  
+  .animated-object-X.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .parent-container .child {
+    opacity: 0;
+    transform: translateY(-70px);
+    
+    transition: all 1s ease-out;
+  }
+  
+  .parent-container.show .child {
+    opacity: 1;
+    transform: translateY(0);
+  }

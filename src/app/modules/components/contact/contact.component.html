@@ -1,8 +1,14 @@
 <section>
     <div class="container">
         <div class="contact-body">
+            <div class="sectiom-head d-flex flex-wrap justify-content-center">
+                <div class="section_header d-flex flex-wrap">
+                    <h1>Let's Work Together</h1>
+                    <div class="heser_animation animated-heder" #animatedElement [class.show]="isVisible"></div>
+                </div>
+            </div>
             <div class="main-content d-flex justify-content-around gap-4">
-                <div class="head d-flex  flex-column">
+                <div class="head d-flex  flex-column animated-object-X" #animatedElement [class.show]="isVisible">
                     <div>
                         <div class="header">
                             <h2>Contact <span>Me</span></h2>
@@ -17,14 +23,30 @@
                                 <p>[+20] 1020446938</p>
                             </div>
                             <div class="social">
-                                <div class="social-header">
+                                <!-- <div class="social-header">
                                     <h4>Social</h4>
-                                </div>
+                                </div> -->
                                 <div class="icons d-flex gap-2">
-                                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                                    <a 
+                                    href="https://www.facebook.com/shehab.khaled.475174"
+                                    target="_blank">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                    <a 
+                                    href="https://www.instagram.com/shehabkhaled48?r=nametag"
+                                    target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a 
+                                    href="https://www.linkedin.com/in/shehab-khaled-329b192b6/"
+                                    target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                    <a 
+                                    href="https://wa.me/201020446938"
+                                    target="_blank">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
                                 </div>
                             </div>
     
@@ -32,9 +54,9 @@
                     </div>
                 </div>
                 <div class="form-part">
-                    <div class="form-body">
+                    <div class="form-body parent-container" #parentContainer>
                         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                            <div class="input-feild">
+                            <div class="input-feild child">
                                 <input type="text" placeholder="Your Name" formControlName="name">
                                 <small 
                                 *ngIf="contactForm.hasError('required','name')
@@ -44,7 +66,7 @@
                                 Name is required
                                 </small>
                             </div>
-                            <div class="input-feild">
+                            <div class="input-feild child">
                                 <input type="email" placeholder="Your Email" formControlName="email">
                                 <small 
                                 *ngIf="contactForm.hasError('required','email')
@@ -53,8 +75,13 @@
                                 class="text-danger m-0 p-0">
                                 Email is required
                                 </small>
+                                <small 
+                                *ngIf="contactForm.get('email')?.getError('email')" 
+                                class="text-light-emphasis m-0 p-0">
+                                Email should be as "name&#64;example.com"
+                                </small>
                             </div>
-                            <div class="input-feild">
+                            <div class="input-feild child">
                                 <textarea name="" id="" placeholder="Your Massage" formControlName="massage"></textarea>
                                 <small 
                                 *ngIf="contactForm.hasError('required','massage')
@@ -64,7 +91,7 @@
                                 Massage is required
                                 </small>
                             </div>
-                            <div class="input-feild">
+                            <div class="input-feild child">
                                 <button>Submit</button>
                             </div>
                         </form>
