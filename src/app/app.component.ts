@@ -7,6 +7,7 @@ import { ProjectsComponent } from './modules/components/projects/projects.compon
 import { NgClass } from '@angular/common';
 import { HomeComponent } from './modules/components/home/home.component';
 import { ContactComponent } from './modules/components/contact/contact.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { ContactComponent } from './modules/components/contact/contact.component
     ProjectsComponent,
     HomeComponent,
     ContactComponent,
-    NgClass],
+    NgClass,
+    FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
