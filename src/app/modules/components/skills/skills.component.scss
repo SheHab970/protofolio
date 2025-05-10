@@ -40,7 +40,7 @@ section{
                                 img{
                                     width: 100%;
                                     object-fit: cover;
-                                    border-radius: 50%;
+                                    border-radius: 5%;
                                     height: auto;
                                     display: inline-block;
                                     margin-right: 10px;
@@ -49,6 +49,7 @@ section{
                             h4{
                                 font-size: 18px;
                                 color: var(--LightText);
+                                text-transform: uppercase;
                             }
 
                         }

@@ -31,6 +31,18 @@ export class SkillsComponent {
       img: 'assets/imgs/Angular.webp'
     },
     {
+      name: 'Git',
+      img: 'assets/imgs/git.jpg'
+    },
+    {
+      name: 'Github',
+      img: 'assets/imgs/github-512.webp'
+    },
+    {
+      name: 'Sass',
+      img: 'assets/imgs/sass.png'
+    },
+    {
       name: 'BootStrap',
       img: 'assets/imgs/bootstrap.png'
     }
