@@ -64,7 +64,10 @@ section{
 
                     }
                     .btns{
-                        margin-left: 10px;
+                        padding: 0px 12px;
+                        transition: 0.5s all;
+                        transform: translateY(100%);
+                        opacity: 0;
                         button{
                             outline: none;
                             border: none;
@@ -72,8 +75,7 @@ section{
                             border-radius: 8px;
                             transition: 0.5s all;
                             background: var(--buttonColor);
-                            transform: translateY(100%);
-                            opacity: 0;
+
                             &:hover{
                                 background: var(--buttonHover);
                                 transform: scale(1.1) !important;
@@ -89,6 +91,16 @@ section{
                             text-decoration: none;
                             color: var(--LightText);
                             font-size: 18px;
+                            i{
+                                border-radius: 50%;
+                                transition: 0.4s;
+                                font-size: 28px;
+                                &:hover{
+                                    transform: translateY(-5px);
+                                    box-shadow: 0px 11px 13px 0px rgba(0, 0, 0, 0.6);
+                                    color: var(--buttonColor);
+                                }
+                            }
 
                         }
                     }
@@ -98,7 +110,7 @@ section{
                         transform: translateY(-20px);
                         box-shadow: 1px 23px 42px 0px rgba(0,0,0,0.6);
                     }
-                    &:hover .btns button{
+                    &:hover .btns {
                         transform: translateY(0);
                         opacity: 1;
                     }
@@ -123,3 +135,25 @@ section{
         transform: scale(1);
       }
 }
+
+  @media (min-width : 280px) and (max-width : 767px){
+    section{
+        .projects-sec{
+            gap: 1.5rem;
+            .header{
+                h2{
+                    font-size: 3rem;
+                }
+            }
+            .body{
+                .projects{
+                    padding: 0px 15px;
+                    .project{
+                        width: 100%;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+        }
+    }
+  }

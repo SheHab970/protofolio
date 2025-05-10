@@ -5,6 +5,7 @@ section{
     .footer-sec{
         background-color: var(--backgroundColor);
         padding: 30px 0px;
+        overflow: hidden;
         .footer-body{
             .main-content{
                 padding: 0px 30px;
@@ -204,4 +205,90 @@ section{
         background-size: cover;
         background-image: url('/assets/svg/wave.svg'); /* or use a data URI */
     }
+
+    // for animation
+    .animated-object-X {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .animated-object-X.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+  @media (min-width : 280px) and (max-width : 767px){
+    section{
+        .footer-sec{
+            .footer-body{
+                .main-content{
+                    padding: 0px 10px;
+                    gap: 2.5rem;
+                    .logo{
+                        width: 100%;
+                        .head{
+                            justify-content: center;
+                            margin: 0;
+                            .image{
+                                width: 12%;
+                            }
+                            .name{
+                                h3{
+                                    font-size: 25px;
+                                }
+                            }
+                        }
+                    }
+                    .links{
+                        width: 100%;
+                        padding-left: 0;
+                        align-items: center;
+                        h4{
+                            padding-bottom: 2px;
+                            margin-bottom: 20px;
+                        }
+                        ul{
+                            gap: 8px;
+                        }
+                    }
+                    .contact{
+                        width: 100%;
+                        align-items: center;
+                        h4{
+                            padding-bottom: 2px;
+                            margin-bottom: 20px;
+                        }
+                        .contact-box{
+                            margin-bottom: 5px;
+                        }
+                    }
+                    .icons{
+                        padding: 20px 0px;
+                        a{
+                            i{
+                                font-size: 29px;
+                            }
+                        }
+                    }
+                }
+                .copyrignt{
+                    margin-bottom: 40px;
+                    p{
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                    &::before{
+                        top: 7%;
+                    }
+                }
+            }
+        }
+        .curve{
+            height: 118px;
+            width: 100%;
+            top: -9%;
+        }
+    }
+  }

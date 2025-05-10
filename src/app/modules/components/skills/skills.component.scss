@@ -77,3 +77,54 @@ section{
       transform: translateX(-50%);
     }
   }
+
+  @media (min-width : 280px) and (max-width : 767px){
+    section{
+        .skills-body{
+            padding: 3% 4%;
+            .main-body{
+                .header{
+                    h1{
+                        font-size: 3rem;
+                    }
+                    span{
+                        font-size: 3.5rem;
+                    }
+                }
+                .slider{
+                    width: 90%;
+                    .slider-track {
+                    display: inline-block;
+                    white-space: nowrap;
+                    animation: scroll-left 15s linear infinite;
+
+                    .element{
+                        .item{
+                            margin: 0px 25px;
+                            .image{
+                                width: 30px;
+                                height: auto;
+                                padding: 10px 0px;
+                                border-radius: 50%;
+
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                    height: auto;
+                                    display: inline-block;
+                                    margin-right: 10px;
+                                }
+                            }
+                            h4{
+                                font-size: 14px;
+                            }
+
+                        }
+                    }
+                  }
+                }
+            }
+        }
+    }
+  }

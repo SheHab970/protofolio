@@ -78,20 +78,25 @@ export class ContactComponent {
 
     // for Animation 
     @ViewChild('animatedElement') animatedElement!: ElementRef;
+    @ViewChild('animatedElement1') animatedElement1!: ElementRef;
     @ViewChild('parentContainer') parentContainer!: ElementRef;
     @ViewChildren('child') childElements!: QueryList<ElementRef>;
     isVisible = false;
+    isVisible1 = false;
   
     ngAfterViewInit() {
       this.setTransitionDelays();
       this.checkVisibility1(); // check once when loaded
       this.checkVisibility2();
+      this.checkVisibility3();
+      
     }
   
     @HostListener('window:scroll', [])
     onWindowScroll() {
       this.checkVisibility1();
       this.checkVisibility2();
+      this.checkVisibility3();
     }
   
     setTransitionDelays() {
@@ -114,10 +119,20 @@ export class ContactComponent {
     checkVisibility2() {
       const rect1 = this.parentContainer.nativeElement.getBoundingClientRect();
     
-      if (rect1.top < window.innerHeight - 100) {
+      if (rect1.top < window.innerHeight - 100 && rect1.bottom > 100) {
         this.parentContainer.nativeElement.classList.add('show');
       } else {
         this.parentContainer.nativeElement.classList.remove('show');
       }
     }
+      checkVisibility3() {
+    const rect = this.animatedElement1.nativeElement.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+  
+    if (rect.top < windowHeight - 100 && rect.bottom > 100) {
+      this.isVisible1 = true;
+    } else {
+      this.isVisible1 = false;
+    }
+  }
 }

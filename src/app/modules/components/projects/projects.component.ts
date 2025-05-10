@@ -53,7 +53,7 @@ export class ProjectsComponent {
         // Add a delay based on index
         setTimeout(() => {
           el.nativeElement.classList.add('show');
-        }, index * 300); // 200ms delay between each
+        }, index * 200); // 200ms delay between each
       } else {
         el.nativeElement.classList.remove('show');
       }

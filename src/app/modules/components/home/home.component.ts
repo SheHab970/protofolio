@@ -26,11 +26,13 @@ export class HomeComponent implements AfterViewInit{
   ngAfterViewInit() {
     this.setTransitionDelays();
     this.checkVisibility(); // check once when loaded
+    this.checkVisibility1(); // check once when loaded
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.checkVisibility();
+    this.checkVisibility1();
   }
 
   setTransitionDelays() {
@@ -42,14 +44,21 @@ export class HomeComponent implements AfterViewInit{
 
   checkVisibility() {
     const rect = this.animatedElement.nativeElement.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+  
+    if (rect.top < windowHeight - 100 && rect.bottom > 100) {
+      this.isVisible = true;
+    } else {
+      this.isVisible = false;
+    }
+  }
+  checkVisibility1() {
     const rect1 = this.parentContainer.nativeElement.getBoundingClientRect();
     const windowHeight = window.innerHeight;
   
-    if (rect.top < windowHeight - 100 && rect.bottom > 100 && rect1.top < window.innerHeight - 100) {
-      this.isVisible = true;
+    if (rect1.top < window.innerHeight - 100 && rect1.bottom > 100) {
       this.parentContainer.nativeElement.classList.add('show');
     } else {
-      this.isVisible = false;
       this.parentContainer.nativeElement.classList.remove('show');
     }
   }

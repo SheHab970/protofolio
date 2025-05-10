@@ -82,7 +82,8 @@ section{
                         width: 100%;
                         .input-feild{
                             position: relative;
-                            padding: 20px 0px;
+                            padding-bottom: 18px;
+                            margin-bottom: 10px;
                             width: 100%;
                             input,textarea{
                                 width: 100%;
@@ -165,4 +166,60 @@ section{
   .parent-container.show .child {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @media (min-width : 280px) and (max-width : 767px){
+    section{
+        .contact-body{
+            margin-bottom: 7rem;
+            .sectiom-head{
+                .section_header{
+                    padding: 3rem 0px 1.5rem 0px;
+                    h1{
+                        font-size: 2.6rem;
+                    }
+                }
+            }
+            .main-content{
+                flex-wrap: wrap;
+                padding: 0px 10px;
+                .head{
+                    width: 100%;
+                    .header{
+                        margin-bottom: 15px;
+                        h2{
+                            font-size: 2rem;
+
+                        }
+                        span{
+                            font-size: 2.3rem;
+                        }
+                    }
+                    .contact{
+                        .contact-box{
+                            i{
+                                font-size: 20px;
+                                padding: 8px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                        .social{
+                            margin-top: 0px;
+                            .icons{
+                                a{
+                                    font-size: 24px;
+                                    padding: 10px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .form-part{
+                    width: 100%;
+                }
+            }
+        }
+    }
   }

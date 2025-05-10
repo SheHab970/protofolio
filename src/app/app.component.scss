@@ -15,8 +15,8 @@ main{
         position: fixed;
         border: none;
         background: var(--buttonColor);
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border-radius: 10px;
         bottom: 4%;
         right: 3%;
@@ -33,7 +33,7 @@ main{
        }
        .up-button i{
         color: white;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
        }
       @keyframes bigSmall {
@@ -45,3 +45,22 @@ main{
         }
       }
 }
+
+  @media (min-width : 280px) and (max-width : 767px){
+    main{
+        .page-section{
+            section{
+                scroll-margin-top: -30px;
+            }
+        }
+        .up-button{
+            width: 28px;
+            height: 28px;
+            border-radius: 5px;
+            bottom: 12%;
+        }
+        .up-button i{
+        font-size: 14px;
+       }
+    }
+  }
