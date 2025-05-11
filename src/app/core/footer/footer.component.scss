@@ -222,6 +222,7 @@ section{
   @media (min-width : 280px) and (max-width : 767px){
     section{
         .footer-sec{
+            padding-bottom: 60px;
             .footer-body{
                 .main-content{
                     padding: 0px 10px;
@@ -277,7 +278,7 @@ section{
                     margin-bottom: 40px;
                     p{
                         text-align: center;
-                        font-size: 14px;
+                        font-size: 15.5px;
                     }
                     &::before{
                         top: 7%;

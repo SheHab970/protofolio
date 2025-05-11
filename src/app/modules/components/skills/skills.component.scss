@@ -82,9 +82,11 @@ section{
   @media (min-width : 280px) and (max-width : 767px){
     section{
         .skills-body{
-            padding: 3% 4%;
+            padding: 15% 0%;
+            margin: 50px 0px;
             .main-body{
                 .header{
+                    padding-bottom: 35px;
                     h1{
                         font-size: 3rem;
                     }
@@ -103,9 +105,9 @@ section{
                         .item{
                             margin: 0px 25px;
                             .image{
-                                width: 30px;
+                                width: 45px;
                                 height: auto;
-                                padding: 10px 0px;
+                                padding: 24px 0px;
                                 border-radius: 50%;
 
                                 img{
@@ -118,7 +120,7 @@ section{
                                 }
                             }
                             h4{
-                                font-size: 14px;
+                                font-size: 16px;
                             }
 
                         }
