@@ -102,13 +102,12 @@
     bottom: 0%;
     top: auto;
     .nav-body{
-        margin: 40px 10px;
-        margin-right: 40px;
+        margin: 40px 0px;
         border-radius: 18px;
         padding: 12px 0px;
         .logo{
             .image{
-                width: 45%;
+                width: 40px;
             }
         }
         .menue{
@@ -116,7 +115,7 @@
                 gap: 10px;
                 li{
                     a{
-                        font-size: 16px;
+                        font-size: 15px;
                     }
                 }
             }
