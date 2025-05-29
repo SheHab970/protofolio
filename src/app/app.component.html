@@ -1,7 +1,7 @@
 
-<main>
+<main [ngClass]="{ 'dark-mode': isDarkMode }" >
   <div class="nav-Bar">
-    <app-nav-bar [activeSection]="activeSection"/>
+    <app-nav-bar [activeSection]="activeSection" (modeChange)="onModeChange($event)"/>
   </div>
 
   <div class="page-section">

@@ -1,4 +1,5 @@
 import { Component, HostListener, AfterViewInit, ViewChild, ElementRef  } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { AboutComponent } from './modules/components/about/about.component';
@@ -21,7 +22,8 @@ import { FooterComponent } from './core/footer/footer.component';
     HomeComponent,
     ContactComponent,
     NgClass,
-    FooterComponent],
+    FooterComponent,
+    CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -103,4 +105,10 @@ export class AppComponent implements AfterViewInit {
   //   }
     
   // }
+
+  // darkmode
+    isDarkMode = false;
+    onModeChange(isDark: boolean) {
+    this.isDarkMode = isDark;
+  }
 }

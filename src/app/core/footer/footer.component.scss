@@ -198,10 +198,10 @@ section{
     }
     .curve {
         position: absolute;
-        height: 250px;
+        height: 173px;
         width: 100%;
-        top: -35%;
-        z-index: -1;
+        top: -45%;
+        z-index: 0;
         background-size: cover;
         background-image: url('/assets/svg/wave.svg'); /* or use a data URI */
     }
@@ -289,7 +289,7 @@ section{
         .curve{
             height: 118px;
             width: 100%;
-            top: -9%;
+            top: -13%;
         }
     }
   }

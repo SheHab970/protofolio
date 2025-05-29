@@ -19,7 +19,17 @@
     --secondarybackgroundColor: #052530;
     --ParagraphColor: #d1d5d6;
     --main-font: "Tajawal", serif;
+    --wave-img: '/assets/svg/wave.svg';
   }
+
+.dark-mode{
+    --backgroundColor: #d1d1d1;
+    --secondarybackgroundColor: #f9f6f2;
+    --backgroundgradient: linear-gradient(165deg,rgba(209, 209, 209, 1) 29%, rgba(255, 255, 255, 1) 77%);
+    --ParagraphColor: #252525;
+    --LightText: #000000;
+    --wave-img: "/assets/svg/wave-light.svg"
+}
   
 *{
     font-family: var(--main-font);
@@ -48,5 +58,5 @@ p{
 
 body{
     // height: 200rem;
-    background: var(--backgroundgradient) !important;
+    // background: var(--backgroundgradient);
   }

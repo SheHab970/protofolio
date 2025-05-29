@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, AfterViewInit, Input } from '@angular/core';
+import { Component, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
@@ -12,5 +12,13 @@ import { RouterLink, RouterModule } from '@angular/router';
 export class NavBarComponent {
 
   @Input() activeSection: string = '';
+
+
+    isDarkMode = false;
+    @Output() modeChange = new EventEmitter<boolean>();
+  togglMode(){
+    this.isDarkMode = !this.isDarkMode
+    this.modeChange.emit(this.isDarkMode);
+  }
 
 }
