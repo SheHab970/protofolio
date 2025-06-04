@@ -1,6 +1,5 @@
 import { Component, HostListener, AfterViewInit, ViewChild, ElementRef  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { AboutComponent } from './modules/components/about/about.component';
 import { SkillsComponent } from './modules/components/skills/skills.component';
@@ -14,7 +13,6 @@ import { FooterComponent } from './core/footer/footer.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     NavBarComponent,
     AboutComponent,
     SkillsComponent,
