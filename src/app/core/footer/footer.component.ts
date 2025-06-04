@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, ViewChildren, QueryList, HostListener, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, ViewChildren, QueryList, HostListener, AfterViewInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -44,5 +44,12 @@ export class FooterComponent implements AfterViewInit{
       // this.parentContainer.nativeElement.classList.remove('show');
     }
   }
+
+  // darkmode
+  @Input() isDarkMode: boolean = false;
+    // isDarkMode = false;
+    // onModeChange(isDark: boolean) {
+    // this.isDarkMode = isDark;
+  // }
 
 }

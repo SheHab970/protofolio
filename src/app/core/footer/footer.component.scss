@@ -203,7 +203,12 @@ section{
         top: -45%;
         z-index: 0;
         background-size: cover;
-        background-image: url('/assets/svg/wave.svg'); /* or use a data URI */
+        overflow: hidden;
+        // background-image: url('/assets/svg/wave.svg');
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     // for animation
@@ -289,7 +294,7 @@ section{
         .curve{
             height: 118px;
             width: 100%;
-            top: -13%;
+            top: -10%;
         }
     }
   }

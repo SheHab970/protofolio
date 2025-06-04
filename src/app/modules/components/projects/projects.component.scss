@@ -75,6 +75,7 @@ section{
                             border-radius: 8px;
                             transition: 0.5s all;
                             background: var(--buttonColor);
+                            color: var(--white) !important;
 
                             &:hover{
                                 background: var(--buttonHover);
@@ -89,9 +90,9 @@ section{
                             outline: none;
                             border: none;
                             text-decoration: none;
-                            color: var(--LightText);
                             font-size: 18px;
                             i{
+                                color: var(--LightText);
                                 border-radius: 50%;
                                 transition: 0.4s;
                                 font-size: 28px;
