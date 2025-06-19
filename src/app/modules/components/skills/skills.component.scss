@@ -1,11 +1,11 @@
 section{
     .skills-body{
         overflow: hidden;
-        padding: 6% 6%;
-        // background-color: var(--backgroundColor);
+        padding: 8% 6%;
+        background-color: var(--secondarybackgroundColor);
         .main-body{
             .header{
-                padding-bottom: 15px;
+                padding-bottom: 60px;
                 width: 100%;
                 h1{
                     font-size: 4.5rem;
@@ -21,6 +21,13 @@ section{
                     overflow: hidden;
                     width: 100%;
                     white-space: nowrap;
+                    position: relative;
+                    .fadee{
+                        position: absolute;
+                        background: var(--gradient);
+                        inset: 0;
+                        pointer-events: none;
+                    }
                   }
                   
                   .slider-track {
@@ -82,8 +89,8 @@ section{
   @media (min-width : 280px) and (max-width : 767px){
     section{
         .skills-body{
-            padding: 15% 0%;
-            margin: 50px 0px;
+            padding: 25% 0%;
+            // margin: 50px 0px;
             .main-body{
                 .header{
                     padding-bottom: 35px;
