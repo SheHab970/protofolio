@@ -15,11 +15,18 @@
                             <p>{{item.description}}</p>
                         </div>
                         <div class="btns d-flex justify-content-between align-items-center">
-                            <button><a [href]="item.url" target="_blank"></a>Viste</button>
+                            <a [href]="item.url" target="_blank">
+                                <button class="d-flex align-items-center gap-2">
+                                    <div>visit</div>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </button>
+                            </a>
                             <a 
                             [href]="item.repourl"
                             target="_blank">
-                            <i class="fa-brands fa-github"></i>
+                            <div class="github-icon">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
                             </a>
                         </div>
                     </div>
