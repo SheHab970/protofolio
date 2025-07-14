@@ -1,6 +1,7 @@
 import { Component , inject, ElementRef, ViewChild, ViewChildren, QueryList, HostListener, AfterViewInit  } from '@angular/core';
 import { ContactService } from '../../../core/services/contact.service';
 import { GooglesheetService } from '../../../core/services/googlesheet.service';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { 
   FormsModule, 
   FormBuilder,  
@@ -25,35 +26,57 @@ export class ContactComponent {
 
   contactForm = this.formBuilder.group({
     name: ['', [Validators.required]],
+    subject: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
-    massage: ['', [Validators.required]],
+    message: ['', [Validators.required]],
   })
 
 
 
   onSubmit(): void{
     if(this.contactForm.valid){
-      const name = this.contactForm.value.name;
-      const email = this.contactForm.value.email;
-      const massage = this.contactForm.value.massage;
+
       const msg = document.getElementById("msg")!;
 
-      this.service.createsheet(name, email, massage).subscribe({
+      this.service.createsheet(this.contactForm.value).subscribe({
         next: (res) => {
           console.log("success", res);
           msg.innerHTML = "Masssge sent successfully";
 
           setTimeout(()=>{
             msg.innerHTML = "";
-          },5000);
+          },6000);
           this.contactForm.reset();
           
         },
         error: (err) => {
           console.log("error", err);
+          msg.style.color = "red";
+          msg.innerHTML = "Error, pleas try again";
+
+          setTimeout(()=>{
+            msg.innerHTML = "";
+          },6000);
           
         }
       })
+
+      // emailjs.send(
+      //   'service_hspqq5m',
+      //   'template_x9s5afi',
+      //   {...this.contactForm.value},
+      //   {
+      //     publicKey: 'lTp5iaB8RSO0KRoRw',
+      //   }
+      // )
+      // .then(
+      //   () => {
+      //     console.log('SUCCESS!');
+      //   },
+      //   (error) => {
+      //     console.log('FAILED...');
+      //   },
+      // );
 
       console.log(this.contactForm.value);
 

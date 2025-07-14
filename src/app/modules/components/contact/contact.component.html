@@ -57,7 +57,7 @@
                     <div class="form-body parent-container" #parentContainer>
                         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                             <div class="input-feild child">
-                                <input type="text" placeholder="Your Name" formControlName="name">
+                                <input type="text" placeholder="Name" formControlName="name">
                                 <small 
                                 *ngIf="contactForm.hasError('required','name')
                                 &&
@@ -67,7 +67,7 @@
                                 </small>
                             </div>
                             <div class="input-feild child">
-                                <input type="email" placeholder="Your Email" formControlName="email">
+                                <input type="email" placeholder="Email" formControlName="email">
                                 <small 
                                 *ngIf="contactForm.hasError('required','email')
                                 &&
@@ -82,13 +82,23 @@
                                 </small>
                             </div>
                             <div class="input-feild child">
-                                <textarea name="" id="" placeholder="Your Massage" formControlName="massage"></textarea>
+                                <input type="text" placeholder="Subject" formControlName="subject">
                                 <small 
-                                *ngIf="contactForm.hasError('required','massage')
+                                *ngIf="contactForm.hasError('required','subject')
                                 &&
-                                contactForm.controls.massage.dirty" 
+                                contactForm.controls.subject.dirty" 
                                 class="text-danger m-0 p-0">
-                                Massage is required
+                                Subject is required
+                                </small>
+                            </div>
+                            <div class="input-feild child">
+                                <textarea name="" id="" placeholder="Message" formControlName="message"></textarea>
+                                <small 
+                                *ngIf="contactForm.hasError('required','message')
+                                &&
+                                contactForm.controls.message.dirty" 
+                                class="text-danger m-0 p-0">
+                                Message is required
                                 </small>
                             </div>
                             <div class="input-feild child">
