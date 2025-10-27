@@ -1,10 +1,12 @@
-import { Component, QueryList, ViewChildren, ElementRef, HostListener, AfterViewInit } from '@angular/core';
+import { Component, QueryList, ViewChildren, ElementRef, HostListener, AfterViewInit, inject } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
+import { ProjectDetailsComponent } from '../project-details/project-details.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectDetailsComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -60,6 +62,16 @@ export class ProjectsComponent {
       } else {
         el.nativeElement.classList.remove('show');
       }
+    });
+  }
+
+
+    private modalService = inject(NgbModal);
+    openRegisterForm(): void {
+    const modalRef = this.modalService.open(ProjectDetailsComponent, {
+      centered: true,
+      backdrop: 'static',
+      scrollable: true,
     });
   }
 
