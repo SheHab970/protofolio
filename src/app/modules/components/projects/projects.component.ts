@@ -6,7 +6,7 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ProjectDetailsComponent],
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
