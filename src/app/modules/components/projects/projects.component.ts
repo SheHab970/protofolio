@@ -2,6 +2,7 @@ import { Component, QueryList, ViewChildren, ElementRef, HostListener, AfterView
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { ProjectDetailsComponent } from '../project-details/project-details.component';
+import { ProjectsService } from '../../../core/services/projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,6 +12,8 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+
+  constructor(private projectsService : ProjectsService){}
 
   projects = [
     {
@@ -38,6 +41,10 @@ export class ProjectsComponent {
       repourl : 'https://github.com/SheHab970/RentaLx_website'
     },
   ];
+
+//   sendId(id: number) {
+//   this.projectsService.setId(id);
+// }
 
   //animation for cards
   @ViewChildren('animatedElements') animatedElements!: QueryList<ElementRef>;
@@ -70,12 +77,14 @@ export class ProjectsComponent {
 
 
     private modalService = inject(NgbModal);
-    openRegisterForm(): void {
+    openRegisterForm(id : number): void {
     const modalRef = this.modalService.open(ProjectDetailsComponent, {
       centered: true,
       backdrop: 'static',
       scrollable: true,
     });
+
+    this.projectsService.setId(id);
   }
 
 }
