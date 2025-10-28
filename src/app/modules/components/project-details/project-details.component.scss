@@ -1,0 +1,124 @@
+.project-details-section{
+    padding: 10px;
+    background-color: var(--backgroundColor);
+    .section-body{
+        background-color: var(--backgroundColor);
+        margin-top: 50px;
+        .closeIcone{
+            i{
+                color: red;
+                font-size: 50px;
+                position: absolute;
+                right: 25px;
+                top: 0px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            i:hover{
+                color: rgb(161, 0, 0);
+                font-size: 48px;
+            }
+        }
+        .scroll-images{
+            .scroll-wrapper {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .image-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 16px;
+            padding: 10px;
+            scrollbar-width: none; /* Firefox */
+            scroll-snap-type: x mandatory;
+
+            &::-webkit-scrollbar {
+                display: none; /* Chrome, Safari */
+            }
+
+            img {
+                flex-shrink: 0;
+                width: 250px;
+                height: 160px;
+                border-radius: 12px;
+                object-fit: cover;
+                scroll-snap-align: center;
+                transition: transform 0.3s ease;
+            }
+
+            img:hover {
+                transform: scale(1.05);
+            }
+            }
+
+            .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: white;
+            font-size: 22px;
+            padding: 10px 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            }
+
+            .scroll-btn.left {
+            left: 10px;
+            }
+
+            .scroll-btn.right {
+            right: 10px;
+            }
+
+    }
+
+    .title{
+        padding: 15px 10px;
+        h2{
+            font-size: 20px;
+            color: var(--newcolor);
+        }
+        p{
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+
+    .langs{
+        padding: 15px 10px;
+        h1{
+            font-size: 22px;
+            color: var(--MainColor);
+            margin: 6px 0px;
+        }
+        p{
+            padding: 4px 16px;
+            transition: 0.3s all;
+            background-color: var(--buttonColor);
+            color: var(--ParagraphColor);
+            border-radius: 14px;
+            font-size: 15px;
+            margin: 0;
+        }
+        p:hover{
+            background-color: var(--buttonHover);
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+}

@@ -1,9 +1,32 @@
-<section class="project-details-section">
+<section class="project-details-section" *ngIf="currentItrm">
     <div class="section-body">
-        <div class="scroll-images">
-            
+        <div class="closeIcone">
+            <i class="fa-solid fa-xmark" (click)="colsePopup()"></i>
         </div>
-        <div class="title"></div>
-        <div class="langs"></div>
+        <div class="scroll-images">
+            <div class="scroll-wrapper">
+                <button class="scroll-btn left" (click)="scrollLeft()">❮</button>
+
+                <div class="image-scroll" #scrollDiv>
+                    <div *ngFor="let item of currentItrm.images">
+                        <img [src]="item" alt="Car 1">
+                    </div>
+                </div>
+
+                <button class="scroll-btn right" (click)="scrollRight()">❯</button>
+            </div>           
+        </div>
+        <div class="title d-flex flex-column gap-2 ">
+            <h2>{{ currentItrm.name }}</h2>
+            <p>{{ currentItrm.description }}</p>
+        </div>
+        <div class="langs d-flex flex-column gap-2 ">
+            <h1>Tech : </h1>
+            <div class=" d-flex gap-2 flex-wrap">
+                <p *ngFor="let item of currentItrm.tech ">
+                    {{item}}
+                </p>
+            </div>
+        </div>
     </div>
 </section>
