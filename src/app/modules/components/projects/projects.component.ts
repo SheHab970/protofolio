@@ -14,6 +14,7 @@ export class ProjectsComponent {
 
   projects = [
     {
+      id : 1,
       img : 'assets/imgs/projects/CtrlPDashboard.png',
       name : 'Admin Dashbourd',
       description: 'Modern Angular dashboard with clean UI and dynamic charts.',
@@ -21,6 +22,7 @@ export class ProjectsComponent {
       repourl : 'https://github.com/SheHab970/CtrlP-Dashboard'
     },
     {
+      id : 2,
       img : 'assets/imgs/projects/Recipes-Sharing.png',
       name : 'Recipes Sharing',
       description: 'A vibrant platform to discover, share, and save your favorite recipes.',
@@ -28,6 +30,7 @@ export class ProjectsComponent {
       repourl : 'https://github.com/jawadTamer/recipe-sharing'
     },
     {
+      id : 3,
       img : 'assets/imgs/projects/RentalX.png',
       name : 'RentalX',
       description: 'Sleek car rental platform with smart booking and real-time availability.',
