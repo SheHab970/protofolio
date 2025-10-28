@@ -8,7 +8,7 @@
                 <div class="projects d-flex gap-1 flex-wrap justify-content-between">
                     <div *ngFor="let item of projects" #animatedElements class="project d-flex flex-column gap-2 animated-object">
                         <div class="image">
-                            <img [src]="item.img" alt="project-img">
+                            <img [src]="item.mainImg" alt="project-img">
                         </div>
                         <div class="description">
                             <h5>{{item.name}}</h5>
