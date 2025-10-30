@@ -43,7 +43,7 @@
 
             img {
                 flex-shrink: 0;
-                width: 300px;
+                width: 400px;
                 height: 200px;
                 border-radius: 10px;
                 object-fit: cover;
@@ -51,9 +51,6 @@
                 transition: transform 0.3s ease;
             }
 
-            img:hover {
-                // transform: scale(1.05);
-            }
             }
 
             .scroll-btn {
