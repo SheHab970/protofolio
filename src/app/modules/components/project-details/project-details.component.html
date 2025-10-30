@@ -9,23 +9,32 @@
                     <i class="fa-solid fa-angle-left"></i>
                 </button>
 
-                <div class="image-scroll" #scrollDiv>
-                    <div *ngFor="let item of currentItrm.images">
-                        <img [src]="item" alt="Car 1">
+                <div class="image-scroll" #scrollDiv (scroll)="onScroll()">
+                    <div *ngFor="let item of currentItrm.images; let i = index">
+                        <img [src]="item"
+                            [class.active]="activeIndex === i"                      
+                            alt="Car 1">
                     </div>
                 </div>
 
                 <button class="scroll-btn right" (click)="scrollRight()">
                     <i class="fa-solid fa-angle-right"></i>
                 </button>
-            </div>           
+            </div> 
+            <!-- Dots -->
+            <div class="dots">
+                <span *ngFor="let img of currentItrm.images; let i = index"
+                        [class.active]="activeIndex === i"
+                        (click)="scrollToIndex(i)">
+                </span>
+            </div>          
         </div>
         <div class="title d-flex flex-column gap-2 ">
             <h2>{{ currentItrm.name }}</h2>
             <p>{{ currentItrm.detailDescription }}</p>
         </div>
         <div class="langs d-flex flex-column gap-3 ">
-            <h1>Tech : </h1>
+            <h1>Tech</h1>
             <div class=" d-flex gap-2 flex-wrap">
                 <p *ngFor="let item of currentItrm.tech ">
                     {{item}}

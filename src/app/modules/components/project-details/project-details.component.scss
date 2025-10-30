@@ -65,10 +65,14 @@
             border-radius: 50%;
             cursor: pointer;
             transition: 0.3s ease;
+            opacity: 0;
 
             &:hover {
                 background: rgba(0, 0, 0, 0.8);
             }
+            }
+            .scroll-wrapper:hover .scroll-btn{
+                opacity: 1;
             }
 
             .scroll-btn.left {
@@ -79,43 +83,70 @@
             right: 10px;
             }
 
-    }
+            
+            /* Dots section */
+            .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 10px;
 
-    .title{
-        padding: 15px 10px;
-        h2{
-            font-size: 20px;
-            color: var(--newcolor);
-        }
-        p{
-            font-size: 16px;
-            margin: 0;
-        }
-    }
+            span {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #ccc;
+                cursor: pointer;
+                transition: background 0.3s ease, transform 0.3s ease;
 
-    .langs{
-        padding: 15px 10px;
-        h1{
-            font-size: 22px;
-            color: var(--secondaryColor);
-            margin: 6px 0px;
+                &.active {
+                background: var(--buttonColor);
+                transform: scale(1.3);
+                }
+            }
+            }
+
         }
-        p{
-            padding: 4px 16px;
-            transition: 0.3s all;
-            background-color: var(--buttonColor);
-            color: var(--ParagraphColor);
-            border-radius: 14px;
-            font-size: 15px;
-            margin: 0;
+
+        .title{
+            padding: 15px 10px;
+            h2{
+                font-size: 20px;
+                color: var(--newcolor);
+            }
+            p{
+                font-size: 16px;
+                margin: 0;
+            }
         }
-        p:hover{
-            background-color: var(--buttonHover);
-            cursor: pointer;
+
+        .langs{
+            padding: 15px 10px;
+            h1{
+                font-size: 22px;
+                color: var(--secondaryColor);
+                margin: 6px 0px;
+            }
+            p{
+                padding: 4px 16px;
+                transition: 0.3s all;
+                background-color: var(--buttonColor);
+                color: var(--ParagraphColor);
+                border-radius: 14px;
+                font-size: 15px;
+                margin: 0;
+            }
+            p:hover{
+                background-color: var(--buttonHover);
+                cursor: pointer;
+            }
         }
     }
 }
 
+  @media (min-width : 280px) and (max-width : 767px){
+    .scroll-btn{
 
-
-}
+        display: none;
+    }
+  }
