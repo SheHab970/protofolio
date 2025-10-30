@@ -5,7 +5,9 @@
         </div>
         <div class="scroll-images">
             <div class="scroll-wrapper">
-                <button class="scroll-btn left" (click)="scrollLeft()">❮</button>
+                <button class="scroll-btn left" (click)="scrollLeft()">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
 
                 <div class="image-scroll" #scrollDiv>
                     <div *ngFor="let item of currentItrm.images">
@@ -13,7 +15,9 @@
                     </div>
                 </div>
 
-                <button class="scroll-btn right" (click)="scrollRight()">❯</button>
+                <button class="scroll-btn right" (click)="scrollRight()">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
             </div>           
         </div>
         <div class="title d-flex flex-column gap-2 ">

@@ -1,22 +1,22 @@
 .project-details-section{
-    padding: 10px;
+    padding: 30px 10px;
     background-color: var(--backgroundColor);
     .section-body{
         background-color: var(--backgroundColor);
-        margin-top: 50px;
+        margin-top: 35px;
         .closeIcone{
             i{
                 color: red;
-                font-size: 50px;
+                font-size: 35px;
                 position: absolute;
                 right: 25px;
-                top: 0px;
+                top: 12px;
                 cursor: pointer;
-                transition: 0.5s;
+                transition: 0.3s;
             }
             i:hover{
                 color: rgb(161, 0, 0);
-                font-size: 48px;
+                font-size: 33px;
             }
         }
         .scroll-images{
@@ -43,16 +43,16 @@
 
             img {
                 flex-shrink: 0;
-                width: 250px;
-                height: 160px;
-                border-radius: 12px;
+                width: 300px;
+                height: 200px;
+                border-radius: 10px;
                 object-fit: cover;
                 scroll-snap-align: center;
                 transition: transform 0.3s ease;
             }
 
             img:hover {
-                transform: scale(1.05);
+                // transform: scale(1.05);
             }
             }
 
@@ -64,7 +64,7 @@
             border: none;
             color: white;
             font-size: 22px;
-            padding: 10px 14px;
+            padding: 10px 16px;
             border-radius: 50%;
             cursor: pointer;
             transition: 0.3s ease;
@@ -100,7 +100,7 @@
         padding: 15px 10px;
         h1{
             font-size: 22px;
-            color: var(--MainColor);
+            color: var(--secondaryColor);
             margin: 6px 0px;
         }
         p{
