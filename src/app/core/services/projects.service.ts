@@ -18,12 +18,12 @@ export class ProjectsService {
     projectsData = [
     {
       id : 1,
-      mainImg : 'assets/imgs/projects/CtrlPDashboard.png',
+      mainImg : 'assets/imgs/projects/dashboard/CtrlPDashboard.png',
       images : [
         'assets/imgs/projects/dashboard/CtrlPDashboard-1.png',
         'assets/imgs/projects/dashboard/CtrlPDashboard-1-1.png',
         'assets/imgs/projects/dashboard/CtrlPDashboard-2.png',
-        'assets/imgs/projects/CtrlPDashboard.png',
+        'assets/imgs/projects/dashboard/CtrlPDashboard.png',
         'assets/imgs/projects/dashboard/CtrlPDashboard-2-2.png',
         'assets/imgs/projects/dashboard/CtrlPDashboard-3.png',
         'assets/imgs/projects/dashboard/CtrlPDashboard-4.png',
@@ -47,10 +47,10 @@ export class ProjectsService {
     },
     {
       id : 2,
-      mainImg : 'assets/imgs/projects/Recipes-Sharing.png',
+      mainImg : 'assets/imgs/projects/recipes/Recipes-Sharing.png',
       images : [
         'assets/imgs/projects/recipes/Recipes-Sharing-1.png',
-        'assets/imgs/projects/Recipes-Sharing.png',
+        'assets/imgs/projects/recipes/Recipes-Sharing.png',
         'assets/imgs/projects/recipes/Recipes-Sharing-2.png',
         'assets/imgs/projects/recipes/Recipes-Sharing-3.png',
         'assets/imgs/projects/recipes/Recipes-Sharing-4.png',
@@ -72,9 +72,9 @@ export class ProjectsService {
     },
     {
       id : 3,
-      mainImg : 'assets/imgs/projects/RentalX.png',
+      mainImg : 'assets/imgs/projects/rentalx/RentalX.png',
       images : [
-        'assets/imgs/projects/RentalX.png',
+        'assets/imgs/projects/rentalx/RentalX.png',
         'assets/imgs/projects/rentalx/RentalX-1.png',
         'assets/imgs/projects/rentalx/RentalX-2.png',
         'assets/imgs/projects/rentalx/RentalX-3.png',
