@@ -145,8 +145,17 @@
 }
 
   @media (min-width : 280px) and (max-width : 767px){
-    .scroll-btn{
-
-        display: none;
+    .scroll-images{
+        .scroll-wrapper{
+            .image-scroll{
+                img{
+                    width: 370px !important;
+                }
+            }
+            .scroll-btn{
+        
+                display: none;
+            }
+        }
     }
   }
