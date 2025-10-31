@@ -91,5 +91,27 @@ export class ProjectsService {
       url : 'https://shehab970.github.io/RentaLx_website/',
       repourl : 'https://github.com/SheHab970/RentaLx_website'
     },
+    {
+      id : 4,
+      mainImg : 'assets/imgs/projects/sprints/sprints-1.png',
+      images : [
+        'assets/imgs/projects/sprints/sprints-1.png',
+        'assets/imgs/projects/sprints/sprints-2.png',
+        'assets/imgs/projects/sprints/sprints-3.png',
+        'assets/imgs/projects/sprints/sprints-4.png',
+        'assets/imgs/projects/sprints/sprints-5.png',
+        'assets/imgs/projects/sprints/sprints-6.png',
+      ],
+      tech : [
+        'HTML',
+        'CSS',
+        'JAVASCRIPT',
+      ],
+      name : 'F & B Restaurant',
+      description: 'F & B Restaurant – Modern Food & Beverage Website.',
+      detailDescription: 'A simple yet elegant restaurant website built using HTML, CSS, and JavaScript as the final project for the Web Development Summer Course by Sprints. The site showcases a modern design with smooth navigation, an attractive menu section, and a responsive layout that adapts seamlessly across devices — reflecting the core principles of front-end web development.',
+      url : 'https://sprints-project-ochre.vercel.app/',
+      repourl : 'https://github.com/SheHab970/sprints-project'
+    },
   ];
 }

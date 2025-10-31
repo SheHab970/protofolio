@@ -5,7 +5,7 @@
                 <h2>Latest <span>Projects</span></h2>
             </div>
             <div class="body">
-                <div class="projects d-flex gap-1 flex-wrap justify-content-between">
+                <div class="projects d-flex flex-wrap justify-content-between">
                     <div *ngFor="let item of projects" #animatedElements class="project d-flex flex-column gap-2 animated-object">
                         <div class="image">
                             <img [src]="item.mainImg" alt="project-img">
