@@ -45,6 +45,14 @@ export class SkillsComponent {
     {
       name: 'BootStrap',
       img: 'assets/imgs/bootstrap.png'
-    }
+    },
+    {
+      name: 'React',
+      img: 'assets/imgs/react.png'
+    },
+    {
+      name: 'Next.js',
+      img: 'assets/imgs/next.png'
+    },
   ];
 }
